@@ -4,22 +4,22 @@ import java.util.*;
 
 public class MapEqualsChallenge {
     public static void main(String... doYourBest) {
-        Map<Stark, String> map = new LinkedHashMap<>();
-        map.put(new Stark("Arya"),  "1");
-        map.put(new Stark("Ned"),   "2");
-        map.put(new Stark("Sansa"), "3");
-        map.put(new Stark("Bran"),  "4");
-        map.put(new Stark("Jaime"), "5");
+        Map<Griffin, String> map = new LinkedHashMap<>();
+        map.put(new Griffin("Chris"),  "1");
+        map.put(new Griffin("Lois"),   "2");
+        map.put(new Griffin("Peter"),  "3");
+        map.put(new Griffin("Brian"),  "4");
+        map.put(new Griffin("Stewie"), "5");
 
         map.forEach((k, v) -> System.out.print(v + "> "));
     }
-    static class Stark {
+    static class Griffin {
         String name;
-        Stark(String name) {this.name = name;}
+        Griffin(String name) {this.name = name;}
 
         public boolean equals(Object obj) {
-            return ((Stark)obj).name.length() == this.name.length(); }
+            return ((Griffin)obj).name.length() == this.name.length(); }
 
-        public int hashCode() { return (name.length() % 1) * 7; }
+        public int hashCode() { return (name.length() % 1) * 37; }
     }
 }
