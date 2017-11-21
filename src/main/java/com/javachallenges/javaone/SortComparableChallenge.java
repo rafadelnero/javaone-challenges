@@ -11,8 +11,7 @@ public class SortComparableChallenge {
         set.add(new Simpson("Bart"));
         set.add(new Simpson("Maggie"));
 
-        List<Simpson> list = new ArrayList<>();
-        list.addAll(set);
+        List<Simpson> list = new ArrayList<>(set);
         Collections.reverse(list);
         list.forEach(System.out::println);
     }
@@ -21,17 +20,12 @@ public class SortComparableChallenge {
         String name;
         public Simpson(String name) { this.name = name; }
 
-        @Override
-        public int compareTo(Simpson simpson) {
+        @Override public int compareTo(Simpson simpson) {
             return simpson.name.compareTo(this.name);
         }
 
-        @Override
-        public String toString() { return this.name; }
+        @Override public String toString() { return this.name; }
 
-        @Override
-        public boolean equals(Object obj) {
-            return ((Simpson) obj).name.equals(this.name);
-        }
+        @Override public boolean equals(Object obj) { return this.name.equals(((Simpson) obj).name); }
     }
 }
