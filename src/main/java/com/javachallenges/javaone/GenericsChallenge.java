@@ -1,4 +1,4 @@
-package com.javachallenges.generics;
+package com.javachallenges.javaone;
 
 import com.sun.org.apache.xerces.internal.xs.StringList;
 

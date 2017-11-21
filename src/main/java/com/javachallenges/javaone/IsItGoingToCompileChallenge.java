@@ -1,4 +1,4 @@
-package com.javachallenges.crazysyntax;
+package com.javachallenges.javaone;
 
 import java.io.Serializable;
 import java.util.Arrays;

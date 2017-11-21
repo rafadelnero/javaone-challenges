@@ -1,4 +1,4 @@
-package com.javachallenges.overloading;
+package com.javachallenges.javaone;
 
 @SuppressWarnings("deprecation")
 public class AdvancedOverloadingChallenge3 {

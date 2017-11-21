@@ -1,4 +1,4 @@
-package com.javachallenges.strings;
+package com.javachallenges.javaone;
 
 /**
  * A - 1357 B - 2357 C - 2368 D - 2367 What is the answer?
