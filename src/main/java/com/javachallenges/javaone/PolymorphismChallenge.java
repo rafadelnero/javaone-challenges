@@ -17,15 +17,10 @@ public class PolymorphismChallenge {
         System.out.println("I love Sax!"); }
     }
 
-    private static void tweet(Simpson simpson) {
-        simpson.talk();
-    }
-
     public static void main(String... doYourBest) {
-        Homer homer = new Homer();
-        tweet(homer);
-        Simpson bart = new Bart();
-        tweet(bart);
+        new Homer().talk();
+        Simpson simpson = new Bart();
+        simpson.talk();
         Lisa lisa = new Lisa();
         lisa.talk();
     }

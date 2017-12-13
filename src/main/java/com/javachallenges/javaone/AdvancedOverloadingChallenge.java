@@ -1,12 +1,12 @@
 package com.javachallenges.javaone;
 
-@SuppressWarnings("deprecation")
-public class AdvancedOverloadingChallenge3 {
+@SuppressWarnings(value = "all")
+public class AdvancedOverloadingChallenge {
 	static String x = "";
 	public static void main(String... doYourBest) {
 		executeAction(1);
 		executeAction(1.0);
-		executeAction(Double.valueOf("5"));
+		executeAction(Float.valueOf("5"));
 		executeAction(1L);
 		
 		System.out.println(x);
@@ -18,4 +18,5 @@ public class AdvancedOverloadingChallenge3 {
 	static void executeAction(float var)   {x += "e"; }
 	static void executeAction(double var)  {x += "f"; }
 }
+
 

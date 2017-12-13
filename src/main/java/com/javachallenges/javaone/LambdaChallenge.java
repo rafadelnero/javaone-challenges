@@ -1,26 +1,32 @@
 package com.javachallenges.javaone;
 
-/** Soon you will see the answers on 
- * 		nobugsproject.com*/
+@SuppressWarnings(value = "all")
 public class LambdaChallenge {
 	public static void main(String ... doYourBest) {
-		String vitoCorleoneShoot = useRevolver(() -> "revolver");
-		String michaelCorleoneShoot = useShotgun(() -> 
-			{return "shotgun";});
+		String vitoShoot = useRevolver(RevolverShoot::shoot);
+		String michaelShoot = useShotgun(
+		        () -> {return "shotgun";});
 		
-		System.out.println(vitoCorleoneShoot + 
-				michaelCorleoneShoot);
+		System.out.println(vitoShoot + michaelShoot);
 	}
 	private static String useRevolver(Revolver revolver) {
 		return revolver.shoot();
 	}
+
+    static class RevolverShoot{
+        static String shoot(){ return "revolver"; }
+    }
+
 	static String useShotgun(Shotgun shotgun) {
 		return shotgun.shoot();
 	}
-	private interface Revolver { String shoot(); }
-	
+
+    @FunctionalInterface
+    private interface Revolver {
+        String shoot();
+    }
 	public interface Shotgun {
 		String shoot();
-		default  String reload() {return "Reloading..."; }
+		default String reload() {return "reloading..."; }
 	}
 }
